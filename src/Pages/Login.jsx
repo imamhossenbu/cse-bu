@@ -11,10 +11,9 @@ import {
     ShieldCheck,
 } from "lucide-react";
 
-const DUMMY_USERS = [
-    { email: "admin@bu.ac.bd", password: "pass1234" },
-    { email: "student@bu.ac.bd", password: "cse2025" },
-];
+
+
+const BG_URL = "../src/assets/terms.jpg"; // <-- replace with your path if different
 
 export default function Login() {
     const navigate = useNavigate();
@@ -46,7 +45,6 @@ export default function Login() {
         if (v) return setError(v);
 
         setLoading(true);
-        // Simulate a network delay
         setTimeout(() => {
             const match = DUMMY_USERS.find(
                 (u) => u.email === email.trim() && u.password === password
@@ -57,34 +55,47 @@ export default function Login() {
                 return;
             }
             if (remember) {
-                // demo only: store a fake token
                 localStorage.setItem("bu_cse_token", "demo-token");
                 localStorage.setItem("bu_cse_user", email.trim());
             }
             setSuccess("Logged in successfully!");
             setLoading(false);
-            // redirect after a brief moment
             setTimeout(() => navigate("/"), 600);
         }, 650);
     };
 
     return (
-        <div className="min-h-[70vh] pt-4  grid place-items-center bg-white">
-            <div className="w-full max-w-md">
-                {/* Header */}
-                <div className="text-center mb-6">
-                    <h1 className="text-2xl font-extrabold tracking-tight text-[#001BB7]">
-                        Sign in to BU CSE
-                    </h1>
+        <section className="relative w-screen min-h-screen overflow-hidden grid place-items-center">
+            {/* Full-width background image */}
+            <img
+                src={BG_URL}
+                alt=""
+                className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+            />
+            {/* Overlay for readability */}
+            <div className="absolute inset-0 bg-[#001BB7]/55" />
+            {/* Subtle brand accent glow */}
+            <div className="pointer-events-none absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-[#FF8040] blur-3xl opacity-30" />
 
-                </div>
-
+            {/* All content lives INSIDE this centered div */}
+            <div className="relative z-10 w-full max-w-md px-4">
                 {/* Card */}
-                <div className="rounded-2xl border border-[#E9E9E9] bg-white shadow-sm overflow-hidden">
+                <div className="rounded-2xl border border-white/20 bg-white/90 backdrop-blur-md shadow-2xl overflow-hidden">
                     {/* Accent top bar */}
                     <div className="h-1 bg-gradient-to-r from-[#001BB7] via-[#0046FF] to-[#FF8040]" />
 
                     <form onSubmit={handleSubmit} className="p-5 sm:p-6">
+                        {/* Header (inside the same div) */}
+                        <div className="flex justify-center items-center pb-2">
+                            <img className="h-16 w-16 rounded-full" src="../src/assets/download.png" alt="" />
+                        </div>
+                        <div className="text-center mb-5">
+                            <h1 className="text-2xl font-extrabold tracking-tight text-[#001BB7]">
+                                Sign in to BU CSE
+                            </h1>
+
+                        </div>
+
                         {/* Alerts */}
                         <div className="min-h-6">
                             <AnimatePresence>
@@ -193,12 +204,9 @@ export default function Login() {
                                 "Sign in"
                             )}
                         </button>
-
-
                     </form>
                 </div>
-
             </div>
-        </div>
+        </section>
     );
 }

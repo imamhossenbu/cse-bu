@@ -57,7 +57,7 @@ export default function Footer() {
 
 
     return (
-        <footer className="mt-16 ">
+        <footer className=" ">
             {/* Thin brand line */}
             <div className="h-1 w-full bg-gradient-to-r from-[#001BB7] via-[#0046FF] to-[#FF8040]" />
 

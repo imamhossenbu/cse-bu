@@ -18,6 +18,12 @@ import Research from "../Pages/Research/Research";
 import Labs from "../Pages/Research/Labs";
 import Projects from "../Pages/Research/Projects";
 import Publications from "../Pages/Research/Publications";
+import Alumni from "../Pages/Others/Alumni";
+import Clubs from "../Pages/Others/Clubs";
+import Resources from "../Pages/Others/Resources";
+import Privacy from "../Pages/Privacy";
+import Terms from "../Pages/Terms";
+import Sitemap from "../Pages/Sitemap";
 
 
 const router = createBrowserRouter([
@@ -83,6 +89,30 @@ const router = createBrowserRouter([
             {
                 path: '/research/publications',
                 element: <Publications />
+            },
+            {
+                path: '/alumni',
+                element: <Alumni />
+            },
+            {
+                path: '/clubs',
+                element: <Clubs />
+            },
+            {
+                path: '/resources',
+                element: <Resources />
+            },
+            {
+                path: '/privacy',
+                element: <Privacy />
+            },
+            {
+                path: '/terms',
+                element: <Terms />
+            },
+            {
+                path: '/sitemap',
+                element: <Sitemap />
             },
             {
                 path: '/login',
