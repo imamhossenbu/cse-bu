@@ -57,13 +57,13 @@ export default function Footer() {
 
 
     return (
-        <footer className="mt-16">
+        <footer className="mt-16 ">
             {/* Thin brand line */}
             <div className="h-1 w-full bg-gradient-to-r from-[#001BB7] via-[#0046FF] to-[#FF8040]" />
 
             {/* Main */}
             <div className="bg-white">
-                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                         {/* About / contact (span 5) */}
                         <section className="lg:col-span-5">
@@ -150,21 +150,22 @@ export default function Footer() {
                         </section>
                     </div>
 
-                    {/* Bottom bar */}
-                    <div className="mt-10 rounded-lg bg-[#E9E9E9] px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-                        <p className="text-slate-700">
-                            © {year} BU CSE — University of Barishal. All rights reserved.
-                        </p>
 
-                        <div className="flex items-center gap-3">
-                            <Link to="/privacy" className="text-slate-700 hover:text-[#0046FF]">Privacy</Link>
-                            <span className="text-slate-500">•</span>
-                            <Link to="/terms" className="text-slate-700 hover:text-[#0046FF]">Terms</Link>
-                            <span className="text-slate-500">•</span>
-                            <Link to="/sitemap" className="text-slate-700 hover:text-[#0046FF]">Sitemap</Link>
-                        </div>
+
+                </div>
+                {/* Bottom bar */}
+                <div className="mt-10 bg-[#002ACF] px-6 sm:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+                    <p className="text-white">
+                        © {year} BU CSE — University of Barishal. All rights reserved.
+                    </p>
+
+                    <div className="flex items-center gap-3">
+                        <Link to="/privacy" className="text-white hover:text-[#648bf7]">Privacy</Link>
+                        <span className="text-white">•</span>
+                        <Link to="/terms" className="text-white hover:text-[#648bf7]">Terms</Link>
+                        <span className="text-white">•</span>
+                        <Link to="/sitemap" className="text-white hover:text-[#648bf7]">Sitemap</Link>
                     </div>
-
                 </div>
             </div>
         </footer>

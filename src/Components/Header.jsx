@@ -1,10 +1,10 @@
 // src/components/Header.jsx
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 
-// ----- YOUR MENUS (unchanged) -----
+// ----- MENUS -----
 const menus = [
     {
         label: "Academics",
@@ -24,23 +24,6 @@ const menus = [
         ],
     },
     {
-        label: "Admission",
-        items: [
-            { to: "/admissions/undergrad", label: "Undergraduate" },
-            { to: "/admissions/grad", label: "Graduate" },
-            { to: "/admissions/scholarships", label: "Scholarships" },
-        ],
-    },
-    {
-        label: "Faculty & Staff",
-        items: [
-            { to: "/faculty", label: "Faculty Directory" },
-            { to: "/faculty/professors", label: "Professors" },
-            { to: "/faculty/lecturers", label: "Lecturers" },
-            { to: "/staff", label: "Staff" },
-        ],
-    },
-    {
         label: "Others",
         items: [
             { to: "/alumni", label: "Alumni" },
@@ -53,15 +36,25 @@ const menus = [
 export default function Header() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [showTopbar, setShowTopbar] = React.useState(true);
-    const [showSearch, setShowSearch] = React.useState(false); // toggles desktop topbar search
-    const [showSearchMobile, setShowSearchMobile] = React.useState(false); // toggles mobile search in drawer
+    const [showSearch, setShowSearch] = React.useState(false);
+    const [showSearchMobile, setShowSearchMobile] = React.useState(false);
 
+    // Hide topbar after a tiny scroll
     React.useEffect(() => {
         const onScroll = () => setShowTopbar(window.scrollY < 12);
         onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
+
+    // ---- Auto-close on route change ----
+    const location = useLocation();
+    React.useEffect(() => {
+        setMobileOpen(false);
+        setShowSearchMobile(false);
+        // optionally close desktop search too:
+        // setShowSearch(false);
+    }, [location]);
 
     return (
         <header className="sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
@@ -79,25 +72,33 @@ export default function Header() {
                             <div className="flex items-center justify-between py-2">
                                 {/* left: logo + dept name */}
                                 <div className="flex items-center gap-3">
-                                    <div className=" grid place-items-center  text-white text-sm font-bold">
-                                        <img className="h-16 w-16 rounded-full" src='../src/assets/download.png' alt="logo" />
+                                    <div className="grid place-items-center text-white text-sm font-bold">
+                                        <img
+                                            className="h-16 w-16 rounded-full"
+                                            src="../src/assets/download.png"
+                                            alt="BU CSE Logo"
+                                        />
                                     </div>
                                     <div className="leading-tight">
                                         <p className="font-semibold text-lg sm:text-xl text-[#001BB7]">
-                                            Department of Computer Science & Engineering
+                                            Department of Computer Science &amp; Engineering
                                         </p>
-                                        <p className="text-sm text-slate-600">University of Barishal, Bangladesh</p>
+                                        <p className="text-sm text-slate-600">
+                                            University of Barishal, Bangladesh
+                                        </p>
                                     </div>
                                 </div>
 
-                                {/* right: only Search button (desktop) */}
-                                <div className="flex justify-between items-center gap-3">
-                                    <div className="hidden sm:flex items-center ">
-                                        <Link to='/login'>
-                                            <button className="px-3 py-2 bg-[#003AEA] text-white rounded-lg hover:bg-[#003bea88] cursor-pointer">Log In</button>
+                                {/* right: Desktop Login + Search toggle */}
+                                <div className="flex items-center gap-3">
+                                    <div className="hidden sm:flex">
+                                        <Link to="/login">
+                                            <button className="px-3 py-2 bg-[#003AEA] text-white rounded-lg hover:bg-[#003bea88]">
+                                                Log In
+                                            </button>
                                         </Link>
                                     </div>
-                                    <div className="hidden sm:flex items-center">
+                                    <div className="hidden sm:flex">
                                         <button
                                             className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#001BB7] hover:bg-white"
                                             onClick={() => setShowSearch((v) => !v)}
@@ -146,10 +147,10 @@ export default function Header() {
                         <nav className="hidden md:flex items-center gap-2">
                             <DesktopLink to="/">Home</DesktopLink>
                             <DesktopLink to="/about">About</DesktopLink>
-
-
                             <DesktopLink to="/notices">Notices</DesktopLink>
                             <DesktopLink to="/gallery">Gallery</DesktopLink>
+                            <DesktopLink to="/admission">Admission</DesktopLink>
+                            <DesktopLink to="/faculty">Faculty & Staffs</DesktopLink>
                             <DesktopLink to="/contact">Contact</DesktopLink>
 
                             {menus.map((m) => (
@@ -177,7 +178,7 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Mobile drawer (unchanged) */}
+                {/* ---------------- Mobile drawer ---------------- */}
                 <AnimatePresence initial={false}>
                     {mobileOpen && (
                         <motion.div
@@ -187,22 +188,34 @@ export default function Header() {
                             transition={{ duration: 0.2 }}
                             className="md:hidden border-t border-white/10 bg-white text-slate-800"
                         >
-                            <div className="mx-auto max-w-7xl px-4 py-3 grid gap-2">
-                                {/* Mobile: Search button then collapsible field */}
+                            <div
+                                className="mx-auto max-w-7xl px-4 py-3 grid gap-2"
+                                // ---- Auto-close when any anchor inside is clicked ----
+                                onClickCapture={(e) => {
+                                    const link = e.target.closest("a[href]");
+                                    if (link) {
+                                        setMobileOpen(false);
+                                        setShowSearchMobile(false);
+                                    }
+                                }}
+                            >
+                                {/* top row: login + search toggle */}
                                 <div className="flex gap-2 items-center justify-between">
-                                    <div className=" ">
-                                        <Link to='/login'><button className="px-3 py-2 bg-[#003AEA] text-white rounded-lg hover:bg-[#003bea88] cursor-pointer">Log In</button></Link>
-                                    </div>
-                                    <div>
-                                        <button
-                                            className="inline-flex  items-center justify-center gap-2 rounded-lg border border-[#0046FF]/30 px-3 py-2 text-sm text-[#001BB7]"
-                                            onClick={() => setShowSearchMobile((v) => !v)}
-                                            aria-expanded={showSearchMobile}
-                                        >
-                                            <Search className="h-4 w-4" /> Search
+                                    <Link to="/login">
+                                        <button className="px-3 py-2 bg-[#003AEA] text-white rounded-lg hover:bg-[#003bea88]">
+                                            Log In
                                         </button>
-                                    </div>
+                                    </Link>
+
+                                    <button
+                                        className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#0046FF]/30 px-3 py-2 text-sm text-[#001BB7]"
+                                        onClick={() => setShowSearchMobile((v) => !v)}
+                                        aria-expanded={showSearchMobile}
+                                    >
+                                        <Search className="h-4 w-4" /> Search
+                                    </button>
                                 </div>
+
                                 <AnimatePresence initial={false}>
                                     {showSearchMobile && (
                                         <motion.div
@@ -220,30 +233,20 @@ export default function Header() {
                                     )}
                                 </AnimatePresence>
 
-                                <MobileLink to="/" onClick={() => setMobileOpen(false)}>
-                                    Home
-                                </MobileLink>
-                                <MobileLink to="/about" onClick={() => setMobileOpen(false)}>
-                                    About
-                                </MobileLink>
+                                {/* links */}
+                                <MobileLink to="/">Home</MobileLink>
+                                <MobileLink to="/about">About</MobileLink>
+                                <MobileLink to="/notices">Notices</MobileLink>
+                                <MobileLink to="/gallery">Gallery</MobileLink>
+                                <MobileLink to="/admission">Admission</MobileLink>
+                                <MobileLink to="/faculty">Faculty & Staffs</MobileLink>
+                                <MobileLink to="/contact">Contact</MobileLink>
 
-
-
-                                <MobileLink to="/notices" onClick={() => setMobileOpen(false)}>
-                                    Notices
-                                </MobileLink>
-                                <MobileLink to="/gallery" onClick={() => setMobileOpen(false)}>
-                                    Gallery
-                                </MobileLink>
-                                <MobileLink to="/contact" onClick={() => setMobileOpen(false)}>
-                                    Contact
-                                </MobileLink>
                                 {menus.map((m) => (
                                     <MobileAccordion
                                         key={m.label}
                                         label={m.label}
                                         items={m.items}
-                                        onNavigate={() => setMobileOpen(false)}
                                     />
                                 ))}
                             </div>
@@ -251,8 +254,6 @@ export default function Header() {
                     )}
                 </AnimatePresence>
             </div>
-
-
         </header>
     );
 }
@@ -340,11 +341,10 @@ function DropdownLink({ to, children }) {
 
 /* ================= Mobile helpers ================= */
 
-function MobileLink({ to, onClick, children }) {
+function MobileLink({ to, children }) {
     return (
         <NavLink
             to={to}
-            onClick={onClick}
             className={({ isActive }) =>
                 `block rounded-lg px-3 py-2 text-sm font-medium ${isActive ? "text-[#001BB7] bg-[#E9E9E9]" : "text-slate-800 hover:bg-[#E9E9E9]"
                 }`
@@ -355,7 +355,7 @@ function MobileLink({ to, onClick, children }) {
     );
 }
 
-function MobileAccordion({ label, items, onNavigate }) {
+function MobileAccordion({ label, items }) {
     const [open, setOpen] = React.useState(false);
     return (
         <div className="rounded-lg border border-slate-200">
@@ -382,7 +382,6 @@ function MobileAccordion({ label, items, onNavigate }) {
                                 <NavLink
                                     key={it.to}
                                     to={it.to}
-                                    onClick={onNavigate}
                                     className={({ isActive }) =>
                                         `block px-3 py-2 text-sm ${isActive ? "text-[#001BB7]" : "text-slate-800"
                                         } hover:bg-[#E9E9E9]`
