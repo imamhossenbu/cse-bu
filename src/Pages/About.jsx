@@ -1,5 +1,8 @@
 import React from 'react'
 import Hero from '../Components/Shared/Hero'
+import AboutTeaser from '../Components/Home/AboutTeaser'
+import Vision from '../Components/About/Vision'
+import Mission from '../Components/About/Mission'
 
 const About = () => {
     return (
@@ -11,6 +14,10 @@ const About = () => {
                 overlayOpacity={0.5}
                 height='sm'
             />
+
+            <AboutTeaser />
+            <Vision />
+            <Mission />
 
         </div>
     )

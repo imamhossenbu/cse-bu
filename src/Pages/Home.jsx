@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../Components/Shared/Hero'
 import ChairmanMessage from '../Components/Home/ChairmanMessage'
+import AboutTeaser from '../Components/Home/AboutTeaser'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 overlayOpacity={0.5}
             />
             <ChairmanMessage />
+            <AboutTeaser />
         </div>
     )
 }

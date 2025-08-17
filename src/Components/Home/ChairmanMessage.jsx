@@ -61,11 +61,7 @@ export default function ChairmanWelcomeBlock() {
                 </blockquote>
 
                 {/* stylish underline limited to text width */}
-                <div className="mt-6 flex items-center justify-center gap-3">
-                    <span className="h-[2px] w-16 sm:w-24 bg-[#001BB7] rounded-full" />
-                    <span className="h-2 w-2 rotate-45 bg-[#FF8040] rounded-[2px]" />
-                    <span className="h-[2px] w-16 sm:w-24 bg-[#0046FF] rounded-full" />
-                </div>
+
             </figure>
         </section>
     );
