@@ -10,7 +10,6 @@ import Notices from "../Pages/Notices";
 import Gallery from "../Pages/Gallery";
 import Contact from "../Pages/Contact";
 import Admission from "../Pages/Admission";
-import Faculty from "../Pages/Faculty";
 import Courses from "../Pages/Academics/Courses";
 import Syllabus from "../Pages/Academics/Syllabus";
 import AcademicCalendar from "../Pages/Academics/AcademicCalendar";
@@ -24,6 +23,7 @@ import Resources from "../Pages/Others/Resources";
 import Privacy from "../Pages/Privacy";
 import Terms from "../Pages/Terms";
 import Sitemap from "../Pages/Sitemap";
+import FacultyStaffPage from "../Pages/Faculty";
 
 
 
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/faculty',
-                element: <Faculty />
+                element: <FacultyStaffPage />
             },
             {
                 path: '/academics/courses',

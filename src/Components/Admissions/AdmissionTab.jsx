@@ -279,7 +279,4 @@ function CardHeader({ icon, title }) {
     );
 }
 
-function findTabLink(tab) {
-    const found = TABS.find((t) => t.id === tab);
-    return found?.to || "/admissions";
-}
+
