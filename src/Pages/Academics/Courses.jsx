@@ -1,5 +1,7 @@
 import React from 'react'
 import Hero from '../../Components/Shared/Hero'
+import CourseCatalog from '../../Components/Academics/Courses/CourseCatalog'
+
 
 const Courses = () => {
     return (
@@ -10,6 +12,7 @@ const Courses = () => {
                 bgImage={'../src/assets/courses.jpg'}
                 height='sm'
             />
+            <CourseCatalog />
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../../Components/Shared/Hero'
+import AcademicCalendarList from '../../Components/Academics/Calendar/AcademicCalendarList'
 
 const AcademicCalendar = () => {
     return (
@@ -10,6 +11,7 @@ const AcademicCalendar = () => {
                 bgImage={'../src/assets/calendar.jpg'}
                 height='sm'
             />
+            <AcademicCalendarList />
         </div>
     )
 }

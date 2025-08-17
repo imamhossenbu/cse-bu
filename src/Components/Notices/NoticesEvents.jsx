@@ -11,7 +11,8 @@ import {
     MapPin,
     Search,
 } from "lucide-react";
-import Title from "./Shared/Title";
+import Title from "../Shared/Title";
+
 
 /* ------------------ Dummy Data (15 notices) ------------------ */
 const NOTICES = [

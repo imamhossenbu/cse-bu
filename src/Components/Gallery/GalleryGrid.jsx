@@ -2,7 +2,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, ImageDown } from "lucide-react";
-import Title from "./Shared/Title";
+import Title from "../Shared/Title";
+
 
 /**
  * Props:

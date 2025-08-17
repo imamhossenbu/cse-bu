@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import NoticesMarque from "./NoticesMarque";
+import { label } from "framer-motion/client";
 
 // ----- MENUS -----
 const menus = [
@@ -11,7 +12,7 @@ const menus = [
         label: "Academics",
         items: [
             { to: "/academics/courses", label: "Courses" },
-            { to: "/academics/syllabus", label: "Syllabus" },
+            { to: '/academics/routine', label: 'Class Routine' },
             { to: "/academics/calendar", label: "Academic Calendar" },
         ],
     },

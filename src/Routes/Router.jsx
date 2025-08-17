@@ -11,7 +11,6 @@ import Gallery from "../Pages/Gallery";
 import Contact from "../Pages/Contact";
 import Admission from "../Pages/Admission";
 import Courses from "../Pages/Academics/Courses";
-import Syllabus from "../Pages/Academics/Syllabus";
 import AcademicCalendar from "../Pages/Academics/AcademicCalendar";
 import Research from "../Pages/Research/Research";
 import Labs from "../Pages/Research/Labs";
@@ -24,6 +23,7 @@ import Privacy from "../Pages/Privacy";
 import Terms from "../Pages/Terms";
 import Sitemap from "../Pages/Sitemap";
 import FacultyStaffPage from "../Pages/Faculty";
+import Routine from "../Pages/Academics/Routine";
 
 
 
@@ -68,8 +68,8 @@ const router = createBrowserRouter([
                 element: <Courses />
             },
             {
-                path: '/academics/syllabus',
-                element: <Syllabus />
+                path: '/academics/routine',
+                element: <Routine />
             },
             {
                 path: '/academics/calendar',

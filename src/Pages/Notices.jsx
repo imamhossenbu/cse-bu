@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../Components/Shared/Hero'
-import NoticesEvents from '../Components/NoticesEvents'
+import NoticesEventsPage from '../Components/Notices/NoticesEvents'
+
 
 const Notices = () => {
     return (
@@ -11,7 +12,7 @@ const Notices = () => {
                 bgImage={'../src/assets/notice.jpg'}
                 height='sm'
             />
-            <NoticesEvents />
+            <NoticesEventsPage />
         </div>
     )
 }
