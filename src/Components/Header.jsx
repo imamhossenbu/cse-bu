@@ -144,6 +144,7 @@ export default function Header() {
                     </motion.div>
                 )}
             </AnimatePresence>
+            <NoticesMarque items={SITE_NOTICES} />
 
             {/* ---------------- Main navbar ---------------- */}
             <div className="bg-gradient-to-r from-[#001BB7] to-[#0046FF] text-white border-b border-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/10">
@@ -261,7 +262,6 @@ export default function Header() {
                     )}
                 </AnimatePresence>
             </div>
-            <NoticesMarque items={SITE_NOTICES} />
         </header>
     );
 }

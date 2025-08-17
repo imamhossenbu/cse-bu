@@ -26,6 +26,7 @@ import Terms from "../Pages/Terms";
 import Sitemap from "../Pages/Sitemap";
 
 
+
 const router = createBrowserRouter([
     {
         path: "/",

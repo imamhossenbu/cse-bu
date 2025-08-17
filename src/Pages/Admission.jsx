@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../Components/Shared/Hero'
+import AdmissionTabs from '../Components/Admissions/AdmissionTab'
 
 const Admission = () => {
     return (
@@ -10,6 +11,7 @@ const Admission = () => {
                 bgImage={'../src/assets/admission.jpg'}
                 height='sm'
             />
+            <AdmissionTabs />
         </div>
     )
 }

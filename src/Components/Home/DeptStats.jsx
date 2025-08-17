@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 const STATS = [
     { label: "Students", value: "600+" },
     { label: "Faculty Members", value: "25+" },
-    { label: "Research Projects", value: "150" },
+    { label: "Research Projects", value: "150+" },
     { label: "Graduates", value: "350+" },
 ];
 

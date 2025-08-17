@@ -3,6 +3,8 @@ import Hero from '../Components/Shared/Hero'
 import AboutTeaser from '../Components/Home/AboutTeaser'
 import Vision from '../Components/About/Vision'
 import Mission from '../Components/About/Mission'
+import FocusAreas from '../Components/About/FocusAreas'
+import CTAAbout from '../Components/About/CTAAbout'
 
 const About = () => {
     return (
@@ -18,6 +20,8 @@ const About = () => {
             <AboutTeaser />
             <Vision />
             <Mission />
+            <FocusAreas />
+            <CTAAbout />
 
         </div>
     )
