@@ -3,6 +3,7 @@ import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
+import NoticesMarque from "./NoticesMarque";
 
 // ----- MENUS -----
 const menus = [
@@ -32,6 +33,11 @@ const menus = [
         ],
     },
 ];
+const SITE_NOTICES = [
+    { id: 1, title: "Midterm Exam Routine (Fall 2025)", date: "Oct 05, 2025", to: "/notices" },
+    { id: 2, title: "Course Registration Window", date: "Sep 20–28, 2025", to: "/notices" },
+    { id: 3, title: "Seminar on Generative AI", date: "Sep 25, 2025", to: "/notices" },
+];
 
 export default function Header() {
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -59,6 +65,7 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
             {/* ---------------- Topbar (only at top) ---------------- */}
+
             <AnimatePresence initial={false}>
                 {showTopbar && (
                     <motion.div
@@ -147,7 +154,7 @@ export default function Header() {
                         <nav className="hidden md:flex items-center gap-2">
                             <DesktopLink to="/">Home</DesktopLink>
                             <DesktopLink to="/about">About</DesktopLink>
-                            <DesktopLink to="/notices">Notices</DesktopLink>
+                            <DesktopLink to="/notices">Notices & Events</DesktopLink>
                             <DesktopLink to="/gallery">Gallery</DesktopLink>
                             <DesktopLink to="/admission">Admission</DesktopLink>
                             <DesktopLink to="/faculty">Faculty & Staffs</DesktopLink>
@@ -236,7 +243,7 @@ export default function Header() {
                                 {/* links */}
                                 <MobileLink to="/">Home</MobileLink>
                                 <MobileLink to="/about">About</MobileLink>
-                                <MobileLink to="/notices">Notices</MobileLink>
+                                <MobileLink to="/notices">Notices & Events</MobileLink>
                                 <MobileLink to="/gallery">Gallery</MobileLink>
                                 <MobileLink to="/admission">Admission</MobileLink>
                                 <MobileLink to="/faculty">Faculty & Staffs</MobileLink>
@@ -254,6 +261,7 @@ export default function Header() {
                     )}
                 </AnimatePresence>
             </div>
+            <NoticesMarque items={SITE_NOTICES} />
         </header>
     );
 }
