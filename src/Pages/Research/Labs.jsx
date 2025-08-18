@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../../Components/Shared/Hero'
+import LabsDirectory from '../../Components/Research/LabsDirectory'
 
 const Labs = () => {
     return (
@@ -10,6 +11,7 @@ const Labs = () => {
                 bgImage={'/assets/lab.jpg'}
                 height='sm'
             />
+            <LabsDirectory />
         </div>
     )
 }
