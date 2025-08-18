@@ -2,10 +2,16 @@ import React from 'react'
 import Hero from '../Components/Shared/Hero'
 import ContactInfoCards from '../Components/Contact/ContactInfoCards'
 import DepartmentMap from '../Components/Contact/DepartmentMap'
+import { Helmet } from 'react-helmet'
 
 const Contact = () => {
     return (
         <div>
+            <Helmet>
+                <title>
+                    Contact | BU CSE
+                </title>
+            </Helmet>
             <Hero
                 title={'Contact Us'}
                 subtitle={'Reach the Department of CSE, University of Barishal—office, email, and phone.'}

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Home, ArrowLeft } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { Helmet } from "react-helmet";
 
 export default function ErrorPage() {
     const error = useRouteError();
@@ -31,6 +32,11 @@ export default function ErrorPage() {
 
     return (
         <div className="min-h-[60vh] grid place-items-center bg-white px-4 py-10">
+            <Helmet>
+                <title>
+                    ErrorPage | BU CSE
+                </title>
+            </Helmet>
             <div className="w-full max-w-lg rounded-xl border border-[#E9E9E9] bg-white shadow-sm overflow-hidden">
                 {/* thin accent */}
                 <div className="h-1 bg-gradient-to-r from-[#001BB7] via-[#0046FF] to-[#FF8040]" />

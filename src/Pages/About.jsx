@@ -7,10 +7,16 @@ import FocusAreas from '../Components/About/FocusAreas'
 import CTAAbout from '../Components/About/CTAAbout'
 import FAQ from '../Components/About/FAQ'
 import Testimonials from '../Components/About/Testimonials'
+import { Helmet } from 'react-helmet'
 
 const About = () => {
     return (
         <div>
+            <Helmet>
+                <title>
+                    About | BU CSE
+                </title>
+            </Helmet>
             <Hero
                 title={'Vision & Mission'}
                 subtitle={'Excellence in teaching, impactful research, and service to society.'}

@@ -8,10 +8,14 @@ import FacultySpotlight from '../Components/Home/FacultySpotlight'
 import ResearchHighlights from '../Components/Home/ResearchHighlights'
 import DeptStats from '../Components/Home/DeptStats'
 import CTAApply from '../Components/Home/CTAApply'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>Home | BU CSE</title>
+            </Helmet>
 
 
             <Hero

@@ -10,6 +10,7 @@ import {
     AlertCircle,
     ShieldCheck,
 } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 
 
@@ -66,6 +67,11 @@ export default function Login() {
 
     return (
         <section className="relative w-screen min-h-screen overflow-hidden grid place-items-center">
+            <Helmet>
+                <title>
+                    Log In | BU CSE
+                </title>
+            </Helmet>
             {/* Full-width background image */}
             <img
                 src={BG_URL}

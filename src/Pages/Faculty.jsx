@@ -13,6 +13,7 @@ import {
 
 import Hero from "../Components/Shared/Hero";
 import Title from "../Components/Shared/Title";
+import { Helmet } from "react-helmet";
 
 /* ---------------- Data (category can be string OR string[]) ---------------- */
 const FACULTY = [
@@ -223,6 +224,11 @@ export default function FacultyStaffPage() {
 
     return (
         <>
+            <Helmet>
+                <title>
+                    Faculty | BU CSE
+                </title>
+            </Helmet>
             <Hero
                 title="Faculty & Staff"
                 subtitle="Meet the people who teach, mentor, and keep the department running"

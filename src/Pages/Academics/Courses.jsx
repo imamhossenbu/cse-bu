@@ -1,11 +1,17 @@
 import React from 'react'
 import Hero from '../../Components/Shared/Hero'
 import CourseCatalog from '../../Components/Academics/Courses/CourseCatalog'
+import { Helmet } from 'react-helmet'
 
 
 const Courses = () => {
     return (
         <div>
+            <Helmet>
+                <title>
+                    Courses | BU CSE
+                </title>
+            </Helmet>
             <Hero
                 title={'Program Curriculum'}
                 subtitle={'Structured learning paths from foundations to advanced topics.'}
