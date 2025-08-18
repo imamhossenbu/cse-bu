@@ -9,7 +9,7 @@ import {
     ShieldCheck,
 } from "lucide-react";
 
-const BG_URL = "../src/assets/admission.jpg";
+const BG_URL = "/assets/admission.jpg";
 
 export default function ForgotPassword() {
     const navigate = useNavigate();

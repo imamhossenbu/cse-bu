@@ -13,7 +13,7 @@ import {
 
 
 
-const BG_URL = "../src/assets/terms.jpg"; // <-- replace with your path if different
+const BG_URL = "/assets/terms.jpg"; // <-- replace with your path if different
 
 export default function Login() {
     const navigate = useNavigate();
@@ -87,7 +87,7 @@ export default function Login() {
                     <form onSubmit={handleSubmit} className="p-5 sm:p-6">
                         {/* Header (inside the same div) */}
                         <div className="flex justify-center items-center pb-2">
-                            <img className="h-16 w-16 rounded-full" src="../src/assets/download.png" alt="" />
+                            <img className="h-16 w-16 rounded-full" src="/assets/download.png" alt="" />
                         </div>
                         <div className="text-center mb-5">
                             <h1 className="text-2xl font-extrabold tracking-tight text-[#001BB7]">

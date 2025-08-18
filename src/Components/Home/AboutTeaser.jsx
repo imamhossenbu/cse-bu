@@ -5,7 +5,7 @@ import Title from "../Shared/Title";
 export default function AboutTeaser() {
     const { pathname } = useLocation();
     // Keep images in /public for simple paths
-    const imgSrc = "../src/assets/aboutTeaser.jpg";
+    const imgSrc = "/assets/aboutTeaser.jpg";
     return (
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
             <Title title="About the Department" subtitle="Who we are & what we do" />

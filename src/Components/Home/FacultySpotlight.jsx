@@ -11,28 +11,28 @@ const FACULTY = [
         role: "Associate Professor",
         area: "AI & ML",
         to: "/faculty/associate-professor",
-        img: "../src/assets/chairman.jpg",
+        img: "/assets/chairman.jpg",
     },
     {
         name: "Dr. Md Manjur Ahmed",
         role: "Associate Professor",
         area: "Systems & Security",
         to: "/faculty/associate-professor",
-        img: "../src/assets/monjur.jpg",
+        img: "/assets/monjur.jpg",
     },
     {
         name: "Md. Erfan",
         role: "Assistant Professor",
         area: "HCI & Software Eng.",
         to: "/faculty/assistant-professor",
-        img: "../src/assets/irfan.jpg",
+        img: "/assets/irfan.jpg",
     },
     {
         name: "Md Samsuddoha",
         role: "Assistant Professor",
         area: "Software Engineer",
         to: "/faculty/assistant-professor",
-        img: "../src/assets/sams.jpg",
+        img: "/assets/sams.jpg",
     },
 ];
 

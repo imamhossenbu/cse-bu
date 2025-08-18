@@ -9,7 +9,7 @@ const Contact = () => {
             <Hero
                 title={'Contact Us'}
                 subtitle={'Reach the Department of CSE, University of Barishal—office, email, and phone.'}
-                bgImage={'../src/assets/contact.jpg'}
+                bgImage={'/assets/contact.jpg'}
                 height='sm'
             />
             <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">

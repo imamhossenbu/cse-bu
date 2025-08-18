@@ -7,7 +7,7 @@ const Projects = () => {
             <Hero
                 title={'Research Projects'}
                 subtitle={'Ongoing and completed work across AI, Systems, and Software.'}
-                bgImage={'../src/assets/project.jpg'}
+                bgImage={'/assets/project.jpg'}
                 height='sm'
             />
         </div>

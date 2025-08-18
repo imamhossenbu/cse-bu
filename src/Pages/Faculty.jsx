@@ -23,7 +23,7 @@ const FACULTY = [
         category: ["Head", "Associate Professor"],
         email: "rhfaisal@bu.ac.bd",
         phone: "+8801733977761",
-        img: "../src/assets/chairman.jpg",
+        img: "/assets/chairman.jpg",
     },
     {
         name: "Dr. Md Manjur Ahmed",
@@ -32,7 +32,7 @@ const FACULTY = [
         category: "Associate Professor",
         email: " mmahmed@bu.ac.bd",
         phone: "+8801851924944",
-        img: "../src/assets/monjur.jpg",
+        img: "/assets/monjur.jpg",
     },
     {
         name: "Md. Erfan",
@@ -41,7 +41,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: "",
         phone: "",
-        img: "../src/assets/irfan.jpg",
+        img: "/assets/irfan.jpg",
     },
     {
         name: "Md Mostafijur Rahman",
@@ -50,7 +50,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: "mostafij.csebu@gmail.com",
         phone: "+8801739097182",
-        img: "../src/assets/mustafij.jpg",
+        img: "/assets/mustafij.jpg",
     },
     {
         name: "Md Samsuddoha",
@@ -59,7 +59,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: "msamsuddoha@bu.ac.bd",
         phone: "+8801737349075",
-        img: "../src/assets/sams.jpg",
+        img: "/assets/sams.jpg",
     },
     {
         name: "Dr. Tania Islam",
@@ -68,7 +68,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: "tania.bd.09@gmail.com",
         phone: "+8801059505136",
-        img: "../src/assets/tania.jpg",
+        img: "/assets/tania.jpg",
     },
     {
         name: "Sohely Jahan",
@@ -77,7 +77,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: "sojahan@bu.ac.bd",
         phone: "+8801317419066",
-        img: "../src/assets/sohely.jpg",
+        img: "/assets/sohely.jpg",
     },
     {
         name: "Md. Rashid Al Asif",
@@ -86,7 +86,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: " mraasif@bu.ac.bd",
         phone: "+8801734528367",
-        img: "../src/assets/asif.jpg",
+        img: "/assets/asif.jpg",
     },
     {
         name: "Md Mahbub E Noor",
@@ -95,7 +95,7 @@ const FACULTY = [
         category: "Assistant Professor",
         email: "mmenoor@bu.ac.bd",
         phone: "+8801718916201",
-        img: "../src/assets/noor.png",
+        img: "/assets/noor.png",
     },
 ];
 
@@ -107,7 +107,7 @@ const STAFF = [
         category: "Officer",
         email: "yesminfarjana61@gmail.com",
         phone: "+8801783917785",
-        img: "../src/assets/farjana.jpg",
+        img: "/assets/farjana.jpg",
     },
     {
         name: "Abu Rayhan",
@@ -116,7 +116,7 @@ const STAFF = [
         category: "Officer",
         email: " arayhan@bu.ac.bd",
         phone: "+8801771451204",
-        img: "../src/assets/rayhan.jpg",
+        img: "/assets/rayhan.jpg",
     },
 
     {
@@ -226,7 +226,7 @@ export default function FacultyStaffPage() {
             <Hero
                 title="Faculty & Staff"
                 subtitle="Meet the people who teach, mentor, and keep the department running"
-                bgImage="../src/assets/faculty.jpg"
+                bgImage="/assets/faculty.jpg"
                 height="sm"
                 overlayOpacity={0.45}
             />

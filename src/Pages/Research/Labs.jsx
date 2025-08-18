@@ -7,7 +7,7 @@ const Labs = () => {
             <Hero
                 title={'Labs Directory'}
                 subtitle={'Explore BU CSE’s labs, focus areas, and faculty leads.'}
-                bgImage={'../src/assets/lab.jpg'}
+                bgImage={'/assets/lab.jpg'}
                 height='sm'
             />
         </div>

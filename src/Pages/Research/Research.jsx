@@ -7,7 +7,7 @@ const Research = () => {
             <Hero
                 title={'Research'}
                 subtitle={'From theory to real-world impact in computing.'}
-                bgImage={'../src/assets/research.jpg'}
+                bgImage={'/assets/research.jpg'}
                 height='sm'
             />
         </div>

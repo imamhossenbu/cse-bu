@@ -9,7 +9,7 @@ const Gallery = () => {
             <Hero
                 title={'Photo Gallery'}
                 subtitle={'From classrooms to hackathons—our journey in pictures.'}
-                bgImage={'../src/assets/gallery.jpg'}
+                bgImage={'/assets/gallery.jpg'}
                 height='sm'
             />
             <GalleryGrid />

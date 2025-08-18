@@ -7,7 +7,7 @@ const Publications = () => {
             <Hero
                 title={'Research Publications'}
                 subtitle={'Accepted papers with links to PDFs, code, and data.'}
-                bgImage={'../src/assets/publications.jpg'}
+                bgImage={'/assets/publications.jpg'}
                 height='sm'
             />
         </div>

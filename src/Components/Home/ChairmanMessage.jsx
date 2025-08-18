@@ -3,7 +3,7 @@ import Title from "../Shared/Title";
 
 export default function ChairmanWelcomeBlock() {
     // Prefer storing in /public and referencing like below
-    const photoSrc = "../src/assets/chairman.jpg";
+    const photoSrc = "/assets/chairman.jpg";
 
     const fullMessage =
         "Welcome to the Department of Computer Science and Engineering at the University of Barishal. Our mission is to foster excellence in teaching, research, and innovation. We are committed to preparing our students for successful careers in the ever-evolving field of computing, empowering them to become leaders, innovators, and responsible citizens. Join us as we continue to build a vibrant academic community dedicated to knowledge, discovery, and societal impact.";

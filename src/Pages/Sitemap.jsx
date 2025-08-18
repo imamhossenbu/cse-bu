@@ -7,7 +7,7 @@ const Sitemap = () => {
             <Hero
                 title={'Sitemap'}
                 subtitle={'Browse all sections—academics, research, people, and more.'}
-                bgImage={'../src/assets/sitemap.jpg'}
+                bgImage={'/assets/sitemap.jpg'}
                 height='sm'
             />
         </div>

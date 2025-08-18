@@ -83,7 +83,7 @@ export default function Header() {
                                     <div className="grid place-items-center text-white text-sm font-bold">
                                         <img
                                             className="h-16 w-16 rounded-full"
-                                            src="../src/assets/download.png"
+                                            src="/assets/download.png"
                                             alt="BU CSE Logo"
                                         />
                                     </div>

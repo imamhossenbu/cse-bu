@@ -9,7 +9,7 @@ const Routine = () => {
                 title={'Class Routine'}
                 subtitle={'Find Your Daily Class Schedule'}
                 height='sm'
-                bgImage={'../src/assets/syllabus.jpg'}
+                bgImage={'/assets/syllabus.jpg'}
             />
             <RoutineViewer />
         </div>

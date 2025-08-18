@@ -183,31 +183,31 @@ export default function GalleryGrid({
 }
 
 /* ---- Curated images with only 5 categories & human titles ----
-   Tip: Prefer /public assets like ../src/assets/.... for builds.
+   Tip: Prefer /public assets like /assets/.... for builds.
 */
 const DEFAULT_IMAGES = [
     // Campus
-    { src: "../src/assets/home.jpeg", title: "Riverside Campus Morning", tag: "Campus" },
-    { src: "../src/assets/gallery.jpg", title: "Campus Walkway at Dusk", tag: "Campus" },
-    { src: "../src/assets/aboutTeaser.jpg", title: "Student Life Snapshot", tag: "Campus" },
+    { src: "/assets/home.jpeg", title: "Riverside Campus Morning", tag: "Campus" },
+    { src: "/assets/gallery.jpg", title: "Campus Walkway at Dusk", tag: "Campus" },
+    { src: "/assets/aboutTeaser.jpg", title: "Student Life Snapshot", tag: "Campus" },
 
     // Academics
-    { src: "../src/assets/courses.jpg", title: "Core & Elective Courses", tag: "Academics" },
-    { src: "../src/assets/syllabus.jpg", title: "Syllabus Highlights", tag: "Academics" },
-    { src: "../src/assets/calendar.jpg", title: "Academic Calendar in Action", tag: "Academics" },
+    { src: "/assets/courses.jpg", title: "Core & Elective Courses", tag: "Academics" },
+    { src: "/assets/syllabus.jpg", title: "Syllabus Highlights", tag: "Academics" },
+    { src: "/assets/calendar.jpg", title: "Academic Calendar in Action", tag: "Academics" },
 
     // Research
-    { src: "../src/assets/research.jpg", title: "Research in Action", tag: "Research" },
-    { src: "../src/assets/lab.jpg", title: "Inside the AI & Robotics Lab", tag: "Research" },
-    { src: "../src/assets/publications.jpg", title: "Recent Lab Publications", tag: "Research" },
+    { src: "/assets/research.jpg", title: "Research in Action", tag: "Research" },
+    { src: "/assets/lab.jpg", title: "Inside the AI & Robotics Lab", tag: "Research" },
+    { src: "/assets/publications.jpg", title: "Recent Lab Publications", tag: "Research" },
 
     // Community
-    { src: "../src/assets/club.jpg", title: "Clubs & Societies Fair", tag: "Community" },
-    { src: "../src/assets/alumni.jpg", title: "Alumni Meet-Up", tag: "Community" },
-    { src: "../src/assets/faculty.jpg", title: "Faculty Mentorship", tag: "Community" },
+    { src: "/assets/club.jpg", title: "Clubs & Societies Fair", tag: "Community" },
+    { src: "/assets/alumni.jpg", title: "Alumni Meet-Up", tag: "Community" },
+    { src: "/assets/faculty.jpg", title: "Faculty Mentorship", tag: "Community" },
 
     // Resources
-    { src: "../src/assets/notice.jpg", title: "Notice Board", tag: "Resources" },
-    { src: "../src/assets/contact.jpg", title: "Department Office & Helpdesk", tag: "Resources" },
-    { src: "../src/assets/resourse.jpg", title: "Student Resources & Forms", tag: "Resources" }, // ensure file exists
+    { src: "/assets/notice.jpg", title: "Notice Board", tag: "Resources" },
+    { src: "/assets/contact.jpg", title: "Department Office & Helpdesk", tag: "Resources" },
+    { src: "/assets/resourse.jpg", title: "Student Resources & Forms", tag: "Resources" }, // ensure file exists
 ];

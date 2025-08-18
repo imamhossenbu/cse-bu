@@ -68,7 +68,7 @@ export default function Footer() {
                         {/* About / contact (span 5) */}
                         <section className="lg:col-span-5">
                             <h2 className="">
-                                <img className="h-16 w-16" src="../src/assets/download.png" alt="logo" />
+                                <img className="h-16 w-16" src="/assets/download.png" alt="logo" />
                             </h2>
                             <p className="mt-3 text-sm leading-relaxed text-slate-700">
                                 Department of Computer Science &amp; Engineering, University of

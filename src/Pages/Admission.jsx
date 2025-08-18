@@ -8,7 +8,7 @@ const Admission = () => {
             <Hero
                 title={'Admissions'}
                 subtitle={'Join BU CSE—programs designed for tomorrow’s innovators.'}
-                bgImage={'../src/assets/admission.jpg'}
+                bgImage={'/assets/admission.jpg'}
                 height='sm'
             />
             <AdmissionTabs />

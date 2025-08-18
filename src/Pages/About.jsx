@@ -14,7 +14,7 @@ const About = () => {
             <Hero
                 title={'Vision & Mission'}
                 subtitle={'Excellence in teaching, impactful research, and service to society.'}
-                bgImage={'../src/assets/about.jpg'}
+                bgImage={'/assets/about.jpg'}
                 overlayOpacity={0.5}
                 height='sm'
             />

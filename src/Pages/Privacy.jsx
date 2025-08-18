@@ -7,7 +7,7 @@ const Privacy = () => {
             <Hero
                 title={'Privacy Policy'}
                 subtitle={'How we collect, use, and protect your information at BU CSE.'}
-                bgImage={'../src/assets/privacy.jpg'}
+                bgImage={'/assets/privacy.jpg'}
                 height='sm'
             />
         </div>

@@ -8,7 +8,7 @@ const AcademicCalendar = () => {
             <Hero
                 title={'Academic Calendar'}
                 subtitle={'Key dates for semesters, exams, and holidays at BU CSE.'}
-                bgImage={'../src/assets/calendar.jpg'}
+                bgImage={'/assets/calendar.jpg'}
                 height='sm'
             />
             <AcademicCalendarList />

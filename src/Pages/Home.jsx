@@ -17,7 +17,7 @@ const Home = () => {
             <Hero
                 title="Department of Computer Science & Engineering"
                 subtitle="University of Barishal — advancing learning, research, and innovation in computing."
-                bgImage="../src/assets/home.jpeg"
+                bgImage="/assets/home.jpeg"
                 height="md"
                 overlayOpacity={0.5}
             />

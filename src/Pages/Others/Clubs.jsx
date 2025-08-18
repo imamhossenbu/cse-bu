@@ -7,7 +7,7 @@ const Clubs = () => {
             <Hero
                 title={'Clubs & Societies'}
                 subtitle={'Learn, lead, and have fun—join BU CSE’s student communities.'}
-                bgImage={'../src/assets/club.jpg'}
+                bgImage={'/assets/club.jpg'}
                 height='sm'
             />
         </div>

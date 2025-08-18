@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function CTAApply() {
-    const BG = "../src/assets/sitemap.jpg";
+    const BG = "/assets/sitemap.jpg";
 
     return (
         <section className="relative overflow-hidden">

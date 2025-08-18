@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function CTAAbout({
-    bgImage = "../src/assets/terms.jpg",
+    bgImage = "/assets/terms.jpg",
     overlayColor = "#001BB7",
     overlayOpacity = 0.7,
     title = "Want to know more about BU CSE?",

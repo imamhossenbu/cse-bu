@@ -9,7 +9,7 @@ const Notices = () => {
             <Hero
                 title={'Notices & Announcements'}
                 subtitle={'Official updates, deadlines, and alerts from BU CSE.'}
-                bgImage={'../src/assets/notice.jpg'}
+                bgImage={'/assets/notice.jpg'}
                 height='sm'
             />
             <NoticesEventsPage />

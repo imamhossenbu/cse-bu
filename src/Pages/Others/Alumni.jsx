@@ -7,7 +7,7 @@ const Alumni = () => {
             <Hero
                 title={'Our Graduates'}
                 subtitle={'Journeys from BU CSE to industry, research, and startups.'}
-                bgImage={'../src/assets/alumni.jpg'}
+                bgImage={'/assets/alumni.jpg'}
                 height='sm'
             />
         </div>

@@ -9,7 +9,7 @@ const Courses = () => {
             <Hero
                 title={'Program Curriculum'}
                 subtitle={'Structured learning paths from foundations to advanced topics.'}
-                bgImage={'../src/assets/courses.jpg'}
+                bgImage={'/assets/courses.jpg'}
                 height='sm'
             />
             <CourseCatalog />

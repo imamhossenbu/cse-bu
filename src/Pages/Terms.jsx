@@ -7,7 +7,7 @@ const Terms = () => {
             <Hero
                 title={'Terms & Conditions'}
                 subtitle={'Your responsibilities and our commitments online.'}
-                bgImage={'../src/assets/terms.jpg'}
+                bgImage={'/assets/terms.jpg'}
                 height='sm'
             />
         </div>
