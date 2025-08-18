@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../../Components/Shared/Hero'
+import ProjectsDirectory from '../../Components/Research/ProjectsDirectory'
 
 const Projects = () => {
     return (
@@ -10,6 +11,7 @@ const Projects = () => {
                 bgImage={'/assets/project.jpg'}
                 height='sm'
             />
+            <ProjectsDirectory />
         </div>
     )
 }
